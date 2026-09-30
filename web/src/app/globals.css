@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #03060a;
+  color: #eaf2f7;
+  height: 100%;
+}
+
+body {
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle technical grid behind the command area */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(27, 42, 56, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 42, 56, 0.35) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: -1px -1px;
+}
+
+.label {
+  @apply font-mono text-2xs uppercase tracking-[0.18em] text-muted;
+}
+
+.num {
+  @apply font-mono tabular-nums;
+}
+
+/* Thin scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1b2a38 transparent;
+}
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #1b2a38;
+  border-radius: 3px;
+}
+
+/* React Flow dark overrides */
+.react-flow__attribution {
+  display: none;
+}
+.react-flow__controls {
+  box-shadow: none !important;
+  border: 1px solid #1b2a38;
+}
+.react-flow__controls-button {
+  background: #081018 !important;
+  border-bottom: 1px solid #1b2a38 !important;
+  fill: #81919e !important;
+}
+.react-flow__controls-button:hover {
+  background: #0d1720 !important;
+}
+.react-flow__minimap {
+  background: #03060a !important;
+  border: 1px solid #1b2a38;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+}
